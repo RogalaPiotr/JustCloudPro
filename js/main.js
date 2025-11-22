@@ -101,10 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Show banner if no choice made yet
         if (cookieBanner) {
             setTimeout(() => {
-                cookieBanner.classList.remove('hidden');
-                // Force reflow
-                void cookieBanner.offsetWidth;
-                cookieBanner.classList.add('visible');
+                cookieBanner.classList.add('show');
             }, 1000);
         }
     }
@@ -114,8 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
         acceptBtn.addEventListener('click', () => {
             updateConsent(true);
             if (cookieBanner) {
-                cookieBanner.classList.remove('visible');
-                cookieBanner.classList.add('hidden');
+                cookieBanner.classList.remove('show');
             }
         });
     }
@@ -125,8 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
         rejectBtn.addEventListener('click', () => {
             updateConsent(false);
             if (cookieBanner) {
-                cookieBanner.classList.remove('visible');
-                cookieBanner.classList.add('hidden');
+                cookieBanner.classList.remove('show');
             }
         });
     }
@@ -136,10 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
         openSettingsBtn.addEventListener('click', (e) => {
             e.preventDefault();
             if (cookieBanner) {
-                cookieBanner.classList.remove('hidden');
-                // Force reflow
-                void cookieBanner.offsetWidth;
-                cookieBanner.classList.add('visible');
+                cookieBanner.classList.add('show');
             }
         });
     }
