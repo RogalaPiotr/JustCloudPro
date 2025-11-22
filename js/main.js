@@ -113,7 +113,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (acceptBtn) {
         acceptBtn.addEventListener('click', () => {
             updateConsent(true);
-            if (cookieBanner) cookieBanner.classList.remove('visible');
+            if (cookieBanner) {
+                cookieBanner.classList.remove('visible');
+                cookieBanner.classList.add('hidden');
+            }
         });
     }
 
@@ -121,7 +124,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (rejectBtn) {
         rejectBtn.addEventListener('click', () => {
             updateConsent(false);
-            if (cookieBanner) cookieBanner.classList.remove('visible');
+            if (cookieBanner) {
+                cookieBanner.classList.remove('visible');
+                cookieBanner.classList.add('hidden');
+            }
         });
     }
 

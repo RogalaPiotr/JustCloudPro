@@ -445,7 +445,8 @@ svg.tech-icon {
 }
 
 .cookie-banner.hidden {
-    display: none; /* Fully hide when not needed to prevent interaction */
+    transform: translateY(100%);
+    pointer-events: none; /* Prevent interaction when hidden */
 }
 
 .cookie-content {
