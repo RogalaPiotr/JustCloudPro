@@ -101,6 +101,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Show banner if no choice made yet
         if (cookieBanner) {
             setTimeout(() => {
+                cookieBanner.classList.remove('hidden');
+                // Force reflow
+                void cookieBanner.offsetWidth;
                 cookieBanner.classList.add('visible');
             }, 1000);
         }
